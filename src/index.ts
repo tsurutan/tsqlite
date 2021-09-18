@@ -1,5 +1,6 @@
-const hello = () => {
-  console.log("Hello")
+import { repl } from "./repl";
+
+class TSQlite {
 }
 
-export default hello;
+export default TSQlite;

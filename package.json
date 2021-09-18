@@ -6,6 +6,7 @@
   "scripts": {
     "build": "tsc",
     "prepublishOnly": "npm run build",
+    "cli": "ts-node src/repl/index",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -23,6 +24,7 @@
   },
   "homepage": "https://github.com/tsurutan/tsqlite#readme",
   "devDependencies": {
+    "ts-node": "^10.2.1",
     "typescript": "^4.4.3"
   }
 }
