@@ -1,3 +1,5 @@
+import { MetaCommandResult } from "enums";
+import { demultiplexMetaCommand } from "metaCommands";
 import {createInterface} from "readline"
 
 export const repl = () => {
@@ -10,9 +12,18 @@ export const repl = () => {
   cli.prompt();
 
   cli.on('line', (line) => {
-    // meta_command
-    if(line.startsWith(".exit")) {
-      cli.close()
+    if(line.startsWith(".")) {
+      switch(demultiplexMetaCommand(line)) {
+        case MetaCommandResult.META_COMMAND_SUCCESS:
+          break;
+        case MetaCommandResult.META_COMMAND_SUCCESS_EXIT:
+          cli.close()
+          break;
+        case MetaCommandResult.META_COMMAND_UNRECOGNIZED_COMMAND:
+          break;
+        default:
+          break;
+      }
     }
 
     // meta_command
@@ -23,6 +34,7 @@ export const repl = () => {
     } else {
       console.log("Unknown command.")
     }
+
     cli.prompt();
   }).on('close', function() {
       console.log('Have a great day!');
