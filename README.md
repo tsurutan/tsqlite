@@ -1,7 +1,7 @@
 [![npm version](https://badge.fury.io/js/tsqlite.svg)](https://badge.fury.io/js/tsqlite)  
 # SQLite written in TypeScript
 
-This library is written in SQLite, not ORM or client library.
+This library is a tiny SQLite written in TypeScript, not ORM or client library.
 
 # Install
 
