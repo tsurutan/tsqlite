@@ -8,6 +8,10 @@
     "skipLibCheck": true,
     "declaration": true,
     "pretty": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
     "outDir": "dist"
-  }
+  },
+  "include": ["src/**/*"]
 }

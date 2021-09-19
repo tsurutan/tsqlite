@@ -7,7 +7,10 @@
     "build": "tsc",
     "prepublishOnly": "npm run build",
     "cli": "ts-node src/repl/index",
-    "test": "jest src"
+    "lint": "eslint src",
+    "lint:fix": "prettier-eslint --write src/**/*.ts",
+    "test": "jest src",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -28,12 +31,29 @@
     "@babel/preset-env": "^7.15.6",
     "@babel/preset-typescript": "^7.15.0",
     "@types/jest": "^27.0.1",
+    "@typescript-eslint/eslint-plugin": "^4.31.1",
+    "@typescript-eslint/parser": "^4.31.1",
     "babel-jest": "^27.2.0",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-import-resolver-typescript": "^2.5.0",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-jest": "^24.4.2",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.25.2",
+    "eslint-plugin-react-hooks": "^1.7.0",
+    "husky": "^7.0.2",
     "jest": "^27.2.0",
+    "lint-staged": "^11.1.2",
+    "prettier-eslint": "^13.0.0",
+    "prettier-eslint-cli": "^5.0.1",
     "ts-node": "^10.2.1",
     "typescript": "^4.4.3"
   },
   "dependencies": {
     "ts-jest": "^27.0.5"
+  },
+  "lint-staged": {
+    "*.ts": "prettier-eslint --write"
   }
 }

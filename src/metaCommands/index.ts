@@ -1,1 +1,1 @@
-export { demultiplexMetaCommand } from "./demultiplexer";
+export { demultiplexMetaCommand } from './demultiplexer';

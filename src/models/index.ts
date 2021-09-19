@@ -1,1 +1,1 @@
-export * as Statement from "./statement";
+export * as Statement from './statement';
