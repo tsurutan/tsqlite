@@ -1,4 +1,5 @@
-[![npm version](https://badge.fury.io/js/tsqlite.svg)](https://badge.fury.io/js/tsqlite)  
+[![npm version](https://badge.fury.io/js/tsqlite.svg)](https://badge.fury.io/js/tsqlite)  [![Build Status](https://app.travis-ci.com/tsurutan/tsqlite.svg?branch=master)](https://app.travis-ci.com/tsurutan/tsqlite)
+
 # SQLite written in TypeScript
 
 This library is a tiny SQLite written in TypeScript, not ORM or client library.
