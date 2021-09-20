@@ -1,4 +1,4 @@
-[![npm version](https://badge.fury.io/js/tsqlite.svg)](https://badge.fury.io/js/tsqlite)  [![Build Status](https://app.travis-ci.com/tsurutan/tsqlite.svg?branch=master)](https://app.travis-ci.com/tsurutan/tsqlite)
+[![npm version](https://badge.fury.io/js/tsqlite.svg)](https://badge.fury.io/js/tsqlite)  [![CircleCI](https://circleci.com/gh/circleci/circleci-docs.svg?style=svg)](https://circleci.com/gh/circleci/circleci-docs)
 
 # SQLite written in TypeScript
 
