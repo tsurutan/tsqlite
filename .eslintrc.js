@@ -4,6 +4,7 @@ module.exports = {
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
     'airbnb',
+    'airbnb-typescript',
   ],
   env: {
     es6: true,

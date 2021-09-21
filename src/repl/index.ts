@@ -1,6 +1,7 @@
-import { MetaCommandResult } from 'enums';
+import { MetaCommandResult, StatementType } from 'enums';
 import { demultiplexMetaCommand } from 'metaCommands';
 import { createInterface } from 'readline';
+import { prepareStatement } from 'tokenizer/commands';
 
 export const repl = () => {
   const cli = createInterface({
@@ -25,21 +26,21 @@ export const repl = () => {
           default:
             break;
         }
-      }
-
-      // meta_command
-      if (line.startsWith('select')) {
-        console.log('Select command.');
-      } else if (line.startsWith('insert')) {
-        console.log('Insert command.');
       } else {
-        console.log('Unknown command.');
+        const statement = prepareStatement(line);
+        switch (statement.statementType) {
+          case StatementType.UNKNOWN:
+            console.log('UNKNOWN');
+            break;
+          default:
+            break;
+        }
       }
 
       cli.prompt();
     })
     .on('close', () => {
-      console.log('Have a great day!');
+      console.log('Exit');
       process.exit(0);
     });
 };
