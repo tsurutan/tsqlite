@@ -1,6 +1,3 @@
-import { repl } from "./repl";
-
-class TSQlite {
-}
+class TSQlite {}
 
 export default TSQlite;
