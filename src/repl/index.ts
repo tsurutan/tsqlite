@@ -1,5 +1,5 @@
 import { MetaCommandResult, StatementType } from 'enums';
-import { demultiplexMetaCommand } from 'metaCommands';
+import { demultiplexMetaCommand } from 'tokenizers/metaCommands';
 import { createInterface } from 'readline';
 import { prepareStatement } from 'tokenizers/commands';
 

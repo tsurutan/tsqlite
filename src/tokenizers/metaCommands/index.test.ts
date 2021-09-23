@@ -1,5 +1,5 @@
 import { MetaCommandResult } from 'enums';
-import { demultiplexMetaCommand } from 'metaCommands';
+import { demultiplexMetaCommand } from 'tokenizers/metaCommands';
 
 describe(demultiplexMetaCommand.name, () => {
   describe('when meta command contains .exit', () => {
