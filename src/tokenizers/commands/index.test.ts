@@ -1,5 +1,5 @@
 import { StatementType } from 'enums';
-import { prepareInsert, prepareStatement } from './index';
+import { prepareStatement } from './index';
 
 describe(prepareStatement.name, () => {
   describe.each(['select', 'Select', 'SELECT'])('when command is %s', (command) => {

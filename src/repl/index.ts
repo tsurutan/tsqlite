@@ -1,7 +1,7 @@
 import { MetaCommandResult, StatementType } from 'enums';
 import { demultiplexMetaCommand } from 'metaCommands';
 import { createInterface } from 'readline';
-import { prepareStatement } from 'tokenizer/commands';
+import { prepareStatement } from 'tokenizers/commands';
 
 export const repl = () => {
   const cli = createInterface({
@@ -30,8 +30,14 @@ export const repl = () => {
         const statement = prepareStatement(line);
         switch (statement.statementType) {
           case StatementType.UNKNOWN:
-            console.log('UNKNOWN');
-            break;
+            console.log('UNKNOWN command');
+            return;
+          case StatementType.INVALID_FORMAT:
+            console.log('INVALID_FORMAT');
+            return;
+          case StatementType.INVALID_NEGATIVE_ID:
+            console.log('INVALID_NEGATIVE_ID');
+            return;
           default:
             break;
         }

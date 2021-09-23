@@ -21,11 +21,6 @@ module.exports = {
     '@typescript-eslint',
     'jest',
   ],
-  rules: {
-    quotes: ['error', 'single'],
-    'import/prefer-default-export': 'off',
-    '@typescript-eslint/explicit-module-boundary-types': 'off',
-  },
   settings: {
     'import/resolver': {
       typescript: {
@@ -33,5 +28,12 @@ module.exports = {
         project: './tsconfig.eslint.json',
       },
     },
+  },
+  rules: {
+    quotes: ['error', 'single'],
+    'import/prefer-default-export': 'off',
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
+    'operator-linebreak': 'off',
+    'implicit-arrow-linebreak': 'off',
   },
 };
